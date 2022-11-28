@@ -2,21 +2,40 @@ class App
 {
     runApplication()
     {
+        console.log("hello world!");
         //code gaat hier!
-        let appName = "Gerard Joling";
-        let versionNumber = 0.9
-        let versiondate = 21/11/2022
-        let author = "Gerard Joling"
-        let copyright = "SBS6"
-        let distributor = "Den Haag"
-        let darkmode = true;
-        console.log(appName)
-        console.log(versionNumber)
-        console.log(versiondate)
-        console.log(author)
-        console.log(copyright)
-        console.log(distributor)
-        console.log(darkmode)
+        let canvas = document.getElementById("canvasId");
+        let g = canvas.getContext("2d");
+        document.getElementById("canvasId");
+        g.beginPath()
+        g.fillStyle = "red";
+        g.moveTo(300,100);
+        g.lineTo(700,200);
+        g.lineTo(600,400);
+        g.lineTo(200,300);
+        g.lineTo(300,100);
+        g.closePath();
+        g.stroke();
+        g.fill();
+        g.beginPath()
+        g.fillStyle = "grey";
+        g.moveTo(700,200);
+        g.lineTo(800,300);
+        g.lineTo(600,400);
+        g.lineTo(700,200);
+        g.moveTo(600,400);
+        g.lineTo(600,600);
+        g.lineTo(800,500);
+        g.lineTo(800,300);
+        g.moveTo(600,400);
+        g.lineTo(600,600);
+        g.lineTo(200,500);
+        g.lineTo(200,300);
+        g.lineTo(600,400);
+        g.closePath();
+        g.stroke();
+        g.fill();
+        console.log(canvas);
     }
 }
 
