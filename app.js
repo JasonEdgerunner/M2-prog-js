@@ -1,16 +1,20 @@
 class App
 {
-    runApplication()
+tekenhuis(g, x, y)
     {
         console.log("hello world!");
+        let x = 20;
+        let y = 20;
         //code gaat hier!
         let canvas = document.getElementById("canvasId");
         let g = canvas.getContext("2d");
         document.getElementById("canvasId");
+        console.log(g)
+
         g.beginPath()
         g.fillStyle = "red";
-        g.moveTo(300,100);
-        g.lineTo(700,200);
+        g.moveTo(x,y);
+        g.lineTo(x+280,y+280);
         g.lineTo(600,400);
         g.lineTo(200,300);
         g.lineTo(300,100);
@@ -36,7 +40,13 @@ class App
         g.stroke();
         g.fill();
         console.log(canvas);
+
     }
+    runApplication()
+    {
+        this.tekenhuis()
+    }
+
 }
 
 let app = new App();
